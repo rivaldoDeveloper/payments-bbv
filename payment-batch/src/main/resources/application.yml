@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/bbv_db
+    username: postgres
+    password: senha
+    driver-class-name: org.postgresql.Driver
+  output:
+    ansi:
+      enabled: Always
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+server:
+  port: ${SERVER_PORT:8200}
