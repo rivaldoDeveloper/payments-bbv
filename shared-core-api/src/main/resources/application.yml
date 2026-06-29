@@ -1,4 +1,6 @@
 spring:
+  application:
+    name: 'shared-core-api'
   datasource:
     url: jdbc:postgresql://localhost:5432/bbv_db
     username: postgres
