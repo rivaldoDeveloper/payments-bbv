@@ -52,6 +52,9 @@ public class Transaction {
     @Column(name = "data_atualizacao", nullable = false)
     private LocalDateTime dataAtualizacao;
 
+    @Column(name = "data_transferencia")
+    private LocalDateTime dataTransferencia;
+
     // Método executado automaticamente pelo JPA antes de salvar um registro novo
     @PrePersist
     protected void onCreate() {
