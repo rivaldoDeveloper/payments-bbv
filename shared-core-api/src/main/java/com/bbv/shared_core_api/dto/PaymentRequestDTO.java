@@ -17,4 +17,5 @@ public class PaymentRequestDTO {
     private BigDecimal valor;
     private String tipoProduto; // Ex: PIX, CARTAO_CREDITO, TED, IMPOSTO
     private String informacaoAdicional;
+    private String chavePix;
 }

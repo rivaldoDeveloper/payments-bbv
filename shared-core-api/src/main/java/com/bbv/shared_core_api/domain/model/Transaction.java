@@ -55,6 +55,9 @@ public class Transaction {
     @Column(name = "data_transferencia")
     private LocalDateTime dataTransferencia;
 
+    @Column(name = "chave_pix")
+    private String chavePix; // Pode receber CPF, Telefone, E-mail ou UUID Aleatório
+
     // Método executado automaticamente pelo JPA antes de salvar um registro novo
     @PrePersist
     protected void onCreate() {
