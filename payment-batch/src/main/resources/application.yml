@@ -1,4 +1,6 @@
 spring:
+  application:
+    name: payment-batch
   datasource:
     url: jdbc:postgresql://localhost:5432/bbv_db
     username: postgres
@@ -14,5 +16,13 @@ spring:
     properties:
       hibernate:
         format_sql: true
+
+  # 🚀 CONFIGURAÇÕES DO SPRING BATCH EM YAML:
+  batch:
+    job:
+      enabled: false # Impede o job de rodar sozinho ao ligar o projeto
+    jdbc:
+      initialize-schema: always # Cria as tabelas de controle do Batch (BATCH_JOB_INSTANCE, etc.) automaticamente
+
 server:
   port: ${SERVER_PORT:8200}
